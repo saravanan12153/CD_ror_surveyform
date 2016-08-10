@@ -1,0 +1,12 @@
+
+<%= flash[:success] %>
+<%= flash[:errors] %>
+
+<ul class="list-group">
+    <li class="list-group-item active">Submitted Information:</li>
+        <li class="list-group-item">Name: <%= @student.name =%></li>
+        <li class="list-group-item">Dojo Location: <%= @student.location =%></li>
+        <li class="list-group-item">Favorite Language: <%= @student.language =%></li>
+        <li class="list-group-item">Comment: <%= @student.comment =%></li>
+</ul>
+<button class="btn btn-default"><a href="/">Go Back</a></button>

@@ -1,0 +1,44 @@
+
+<%= flash[:success] %>
+<%= flash[:errors] %>
+
+<div id="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h2>Rails Survey Form</h2>
+      </div>
+    </div>
+    <div class="panel-body">
+    <form action="/create" method="post">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <p>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <label for="dojoLocation">Dojo Location:</label>
+            <select name="location">
+            <option value="Seattle">Seattle</option>
+            <option value="DC">Washington D.C.</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Burbank">Burbank</option>
+        </select>
+        </p>
+        <p>
+            <label for="language">Favorite Language:</label>
+        <select name="language">
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+            <option value="RoR">RoR</option>
+        </select>
+        </p>
+        <p>
+            <label for="name">Comment (optional):</label>
+        </p>
+        <p>
+        <textarea name="comment" rows=10 cols=80></textarea>
+        </p>
+        <input type="submit" class="btn btn-default" value="Submit">
+    </form>
+    </div>
+</div>
